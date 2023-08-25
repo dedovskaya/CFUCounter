@@ -7,8 +7,8 @@ state-of-the-art model for instance segmentation, developed on top of Faster R-C
 https://github.com/matterport/Mask_RCNN
 
 https://agar.neurosys.com/
+![cfucounterUI](https://github.com/dedovskaya/CFUCounter/assets/71874540/a0e5cb34-1a12-4c3a-b23a-d6e56c894257)
 
-![cfucounterUI](https://github.com/dedovskaya/CFUCounter/assets/71874540/f75a73ad-e038-4826-8a93-e3136f8ed8f6)
 # Instructions:
 <ol>
 <li><b>Download .h5 file from this link: https://drive.google.com/file/d/19-mxrjV_EeSQAb7SppIVG_vgjse_pP7u/view?usp=sharing</b></li>
