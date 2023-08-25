@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CFUCounter Guide</title>
+<style>
+/* Table Styles */
+.warning {
+    color: red;
+    font-weight: bold;
+}
+
+.table-wrapper{
+    margin-right: 20px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #b183c6;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #5c1997;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+body {
+    margin: 30px 30px 30px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.start img {
+    display: block;
+    /* margin-left: auto; */
+    margin-right: auto;
+    width: 55px;
+    height: 50px;
+    margin: 14px
+}
+.start{
+    display: inline-flex;
+    color: blueviolet;
+}
+
+</style>
+</head>
+<body>
+<div class="start">
+<img src="icon.png" alt="">
+<h1>CFUCounter Guide</h1>
+</div>
+<h2>Upload a file</h2>
+<ul><li><p>To upload a single image use "Upload File" button.</p></li>
+    <li><p>To upload all images from a folder use "Upload Folder" button.</p></li>
+</ul>
+
+<h2>Set configurations</h2>
+<ol>
+<li><p>Set <b>Number of samples</b>, the maximum number of final detections. If you dont know the estimated number of colonies, leave this number high.</p></li>
+<li><p>Set <b>Detection Confidence</b>, minimum probability value to accept a detected instance. ROIs below this threshold are skipped. For the best results raise its value to 0.99. If you have a vague picture and you think that the application underestimates the number of colonies you can leave the default number or decrease it.</p></li>
+<p>Or just leave the default parameters.</p>
+</ol>
+<p>Hint: you can run the detection multiple times on the same image with different configuration parameters. All the input configuration parameters are saved in the output .csv table.</p>
+<h2>Run Detection</h2>
+<ul>
+<li>
+<p>Click <b>"Detect selected"</b> to detect colonies on the displayed image. The detection will be performed on the picture that is shown in the main window. To change the picture use arrow buttons near thumbnails of images.</p></li>
+<li><p>Click <b>"Detect all"</b> to detect colonies in all the uploaded images.</p></li>
+</ul>
+<h2>Export results</h2>
+<ul>
+<li><p>Click <b>"Export csv table"</b> after the detection process to save a table containing information: img name, number of colonies, bounding boxes (rectangles that surround colonies, that specify their position).</p>
+<p class="warning">Please always export the table before closing the application!</p>
+</li>
+<div class="table-wrapper">
+<table class="fl-table">
+    <thead>
+      <tr>
+        <th>Filename</th>
+        <th>Number of colonies</th>
+        <th>Bounding boxes</th>
+        <th>conf_numsamples</th>
+        <th>conf_det_confidence</th>
+        <th>Colonies per sector</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Filename</td>
+        <td>Number of detected colonies</td>
+        <td>Coordinates of colonies as boxes</td>
+        <td>Max. number of samples</td>
+        <td>Min. detection confidence</td>
+        <td>Number of colonies in each sector</td>
+      </tr>
+    </tbody>
+    </table>
+</div>
+<div class="sectors">
+<p>Sectors represent certain areas of the petri dish:</p>
+<img src="sectors_scheme.png" width='200px' alt="">
+</div>
+<li><p>Click <b>"Export image"</b> to save displayed image.</p></li>
+</ul>
+<h2>Information</h2>
+<p><b>Progress bar</b> shows percentage-wise progress of a current detection process. For a large number of images it does not updates itself consistently.</p>
+<p>In the bottom part of the application there is <b>log window</b> capturing all the events.</p>
+</body>
+</html>
