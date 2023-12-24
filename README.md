@@ -9,26 +9,27 @@ https://github.com/matterport/Mask_RCNN
 https://agar.neurosys.com/
 ![cfucounterUI](https://github.com/dedovskaya/CFUCounter/assets/71874540/a0e5cb34-1a12-4c3a-b23a-d6e56c894257)
 
-# Instructions:
+## Instructions:
 <ol>
-<li><b>Download .h5 file from this link: https://drive.google.com/file/d/19-mxrjV_EeSQAb7SppIVG_vgjse_pP7u/view?usp=sharing</b></li>
+<li><b>Download .h5 file from this link</b>: https://drive.google.com/file/d/19-mxrjV_EeSQAb7SppIVG_vgjse_pP7u/view?usp=sharing</li>
   
-<li><b>Put .h5 file to "agar_cfg20221010T2320" folder</b></li>
+<li>Put .h5 file to <b>"agar_cfg20221010T2320"</b> folder</li>
 
-<li><b>Create an environment with Python 3.6.3 and install dependencies with the following commands in terminal/powershell:</b></li>
+<li>Create an environment with <b>Python 3.6.3</b> and install dependencies with the following commands in terminal/powershell:</li>
 
-conda create -n agarrcnn python=3.6.3
+<ol>
+  <li>conda create -n agarrcnn python=3.6.3</li>
 
-conda activate agarrcnn
+  <li>conda activate agarrcnn</li>
 
-pip install -r requirements.txt
+  <li>pip install -r requirements.txt</li>
+</ol>
 </ol>
 
-# To run the application:
+## To run the application:
 
 python cfucounter.py
 
-# CFUCounter Guide
 </div>
 <h2>Upload a file</h2>
 <ul><li><p>To upload a single image use the "Upload File" button.</p></li>
@@ -37,7 +38,7 @@ python cfucounter.py
 
 <h2>Set configurations</h2>
 <ol>
-<li><p>Set <b>Number of samples</b>, the maximum number of final detections. If you don't know the estimated number of colonies, leave this number high.</p></li>
+<li><p>Set <b>Number of Samples</b>, the maximum number of final detections. If you don't know the estimated number of colonies, leave this number high.</p></li>
 <li><p>Set <b>Detection Confidence</b>, minimum probability value to accept a detected instance. ROIs below this threshold are skipped. For the best results raise its value to 0.99. If you have a vague picture and you think that the application underestimates the number of colonies you can leave the default number or decrease it.</p></li>
 <p>Or just leave the default parameters.</p>
 </ol>
@@ -84,7 +85,7 @@ python cfucounter.py
 <li><p>Click <b>"Export image"</b> to save displayed image.</p></li>
 </ul>
 <h2>Information</h2>
-<p><b>Progress bar</b> shows percentage-wise progress of a current detection process. For a large number of images it does not updates itself consistently.</p>
+<p><b>Progress bar</b> shows percentage-wise progress of a current detection process. For a large number of images, it does not update itself consistently.</p>
 <p>In the bottom part of the application there is <b>log window</b> capturing all the events.</p>
 </body>
 
