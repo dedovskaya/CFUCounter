@@ -3,11 +3,15 @@
 An application that counts colony-forming units in images of petri dishes. CFU Counter uses Mask R-CNN which is a
 state-of-the-art model for instance segmentation, developed on top of Faster R-CNN. The CNN was trained using the Agar dataset.
 
-
+Mask R-CNN:
 https://github.com/matterport/Mask_RCNN
 
+Agar Dataset:
 https://agar.neurosys.com/
-![cfucounterUI](https://github.com/dedovskaya/CFUCounter/assets/71874540/a0e5cb34-1a12-4c3a-b23a-d6e56c894257)
+
+<p align="center">
+<img src="https://github.com/dedovskaya/CFUCounter/assets/71874540/a0e5cb34-1a12-4c3a-b23a-d6e56c894257" width=700>
+</p>
 
 ## Instructions:
 <ol>
